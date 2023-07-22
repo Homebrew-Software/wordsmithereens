@@ -1,0 +1,5 @@
+= Wordsmithereens
+
+A 2-D side-scrolling word-busting game!
+
+This game was written for the purpose of practicing C++ coding.
