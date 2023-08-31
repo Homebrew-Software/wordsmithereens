@@ -4,7 +4,7 @@
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
+    sf::RenderWindow window(sf::VideoMode(600, 400), "SFML works!");
     sf::CircleShape shape(100.f);
     shape.setFillColor(sf::Color::Green);
     sf::CircleShape player = init_player_sprite();
@@ -21,6 +21,23 @@ int main()
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Q))
             {
                 window.close();
+            }
+            else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Up))
+            {
+                // Using method Transformable.move().
+                player.move(0.f, -10.f);
+            }
+            else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+            {
+                player.move(0.f, 10.f);
+            }
+            else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Left))
+            {
+                player.move(-10.f, 0.f);
+            }
+            else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+            {
+                player.move(10.f, 0.f);
             }
         }
 
